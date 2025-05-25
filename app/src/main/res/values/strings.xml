@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">D4CShop</string>
+    <string name="shop">Shop</string>
+    <string name="back">Back</string>
+    <string name="search">Search</string>
+    <string name="favorites">Favorites</string>
+    <string name="cart">Cart</string>
+    <string name="promotional_banner">Promotional Banner</string>
+    <string name="get_20_off">GET 20% OFF</string>
+    <string name="get_20_off_">Get 20% off</string>
+    <string name="_12_16_october">12-16 October</string>
+    <string name="categories">Categories</string>
+    <string name="see_all">See all</string>
+    <string name="new_products">New products</string>
+    <string name="no_image">No Image</string>
+    <string name="add_to_favorites">Add to favorites</string>
+    <string name="best_seller">Best seller</string>
+    <string name="in_stock">In stock</string>
+    <string name="out_of_stock">Out of stock</string>
+    <string name="add_to_cart">Add to cart</string>
+</resources>
