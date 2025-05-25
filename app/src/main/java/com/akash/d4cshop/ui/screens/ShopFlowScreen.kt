@@ -75,7 +75,6 @@ fun ShopFlowScreen(viewModel: ShopViewModel = ShopViewModel()) {
             .fillMaxSize()
             .background(Color.Black.copy(alpha = 0.5f))
     ) {
-        // Top App Bar
         TopAppBar(
             title = {
                 Text(
@@ -237,8 +236,6 @@ fun ShopFlowScreen(viewModel: ShopViewModel = ShopViewModel()) {
                 }
 
             }
-
-            // Categories Section
             item {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -278,8 +275,6 @@ fun ShopFlowScreen(viewModel: ShopViewModel = ShopViewModel()) {
                     }
                 }
             }
-
-            // New Products Section
             item {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -306,8 +301,6 @@ fun ShopFlowScreen(viewModel: ShopViewModel = ShopViewModel()) {
                     }
                 }
             }
-
-            // Products List
             items(products) { product ->
                 ProductCard(product = product)
             }
@@ -350,7 +343,7 @@ fun ProductCard(product: Product) {
     Box(
         modifier = Modifier.fillMaxWidth()
     ) {
-        // Product Background Card using your drawable
+     
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -360,7 +353,7 @@ fun ProductCard(product: Product) {
                     contentScale = ContentScale.FillBounds
                 )
         ) {
-            // Product image area
+          
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -368,7 +361,6 @@ fun ProductCard(product: Product) {
                     .padding(20.dp),
                 contentAlignment = Alignment.Center
             ) {
-                // Product image placeholder - you can replace this with actual image
                 if (product.image != null) {
                     Image(
                         painter = painterResource(id = product.image),
@@ -393,7 +385,6 @@ fun ProductCard(product: Product) {
                 }
             }
 
-            // Top row with favorite and best seller
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -401,7 +392,7 @@ fun ProductCard(product: Product) {
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.Top
             ) {
-                // Favorite button
+            
                 Surface(
                     onClick = { },
                     shape = CircleShape,
@@ -416,7 +407,7 @@ fun ProductCard(product: Product) {
                     )
                 }
 
-                // Best seller badge
+               
                 if (product.isBestSeller) {
                     Surface(
                         shape = RoundedCornerShape(20.dp),
@@ -435,7 +426,7 @@ fun ProductCard(product: Product) {
             }
         }
 
-        // Product Title Card using your drawable - Overlaid at the bottom
+        
         Box(
             modifier = Modifier
                 .align(Alignment.BottomCenter)
@@ -452,7 +443,7 @@ fun ProductCard(product: Product) {
                     .fillMaxWidth()
                     .padding(20.dp)
             ) {
-                // Brand and stock status
+               
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
@@ -509,7 +500,7 @@ fun ProductCard(product: Product) {
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Price and rating row
+              
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
@@ -591,10 +582,3 @@ fun ProductCard(product: Product) {
         }
     }
 
-
-@Preview
-@Composable
-private fun Previewfun() {
-    val viewModel = ShopViewModel()
-    ShopFlowScreen(viewModel)
-}
